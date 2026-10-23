@@ -92,3 +92,32 @@ public class dz {
                 int entertainmentTime = socialTime + gamingTime + streamingTime;
                 if (studyingTime > entertainmentTime) {
                     System.out.println("Study screen time is greater than entertainment screen time. Good balance!");
+                } else if (entertainmentTime > studyingTime) {
+                    System.out.println("Entertainment screen time is greater than study time.");
+                } else {
+                    System.out.println("Study and entertainment screen time are equal.");
+                }
+
+                // Daily category
+                if (totalScreenTime < 120) {
+                    System.out.println("Low screen time");
+                } else if (totalScreenTime <= 240) {
+                    System.out.println("Moderate screen time");
+                } else {
+                    System.out.println("High screen time");
+                }
+                System.out.println();
+
+            } else if (choice == 6) {
+                System.out.println("Screen-time tracker closed.");
+
+            } else {
+                System.out.println("Invalid option. Please choose from 1 to 6.");
+                System.out.println();
+            }
+        }
+
+        scanner.close();
+    }
+}
+
